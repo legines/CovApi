@@ -1,2 +1,0 @@
-class ConfirmedLocation < ApplicationRecord
-end
