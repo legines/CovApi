@@ -1,0 +1,2 @@
+class ConfirmedLocation < ApplicationRecord
+end
