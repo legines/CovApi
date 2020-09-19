@@ -5,7 +5,7 @@ class CreateOccurrences < ActiveRecord::Migration[6.0]
         t.string :confirmed
         t.integer :deaths
         t.integer :recovered
-        t.references :country, index: true
+        t.references :location, index: true
         t.timestamps
     end
   end

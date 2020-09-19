@@ -1,8 +1,8 @@
 class CreateConfirmedLocations < ActiveRecord::Migration[6.0]
   def change
-    create_table :countries do |t|
+    create_table :locations do |t|
       t.string :province_state
-      t.string :country_region
+      t.string :country
       t.integer :latitude
       t.integer :longitude
       t.timestamps

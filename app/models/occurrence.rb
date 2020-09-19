@@ -1,3 +1,3 @@
 class Occurrence < ApplicationRecord
-    belongs_to :country
+    belongs_to :location
 end
