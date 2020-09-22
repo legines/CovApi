@@ -15,9 +15,9 @@ ActiveRecord::Schema.define(version: 2020_08_03_214731) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "countries", force: :cascade do |t|
+  create_table "locations", force: :cascade do |t|
     t.string "province_state"
-    t.string "country_region"
+    t.string "country"
     t.integer "latitude"
     t.integer "longitude"
     t.datetime "created_at", precision: 6, null: false
@@ -25,16 +25,14 @@ ActiveRecord::Schema.define(version: 2020_08_03_214731) do
   end
 
   create_table "occurrences", force: :cascade do |t|
-    t.string "date"
+    t.datetime "date"
     t.string "confirmed"
     t.integer "deaths"
     t.integer "recovered"
-    t.bigint "occurrences_id"
-    t.bigint "country_id"
+    t.bigint "location_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["country_id"], name: "index_occurrences_on_country_id"
-    t.index ["occurrences_id"], name: "index_occurrences_on_occurrences_id"
+    t.index ["location_id"], name: "index_occurrences_on_location_id"
   end
 
 end

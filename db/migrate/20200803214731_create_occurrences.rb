@@ -1,7 +1,7 @@
 class CreateOccurrences < ActiveRecord::Migration[6.0]
   def change
     create_table :occurrences do |t|
-        t.string :date
+        t.datetime :date
         t.string :confirmed
         t.integer :deaths
         t.integer :recovered
