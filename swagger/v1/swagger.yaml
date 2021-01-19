@@ -1,0 +1,100 @@
+---
+openapi: 3.0.1
+info:
+  title: Coronavirus Tracker
+  version: v1
+paths:
+  "/api/v1/locations/{id}/confirmed":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: Get all confirmed cases for a location
+      tags:
+      - v1
+      responses:
+        '200':
+          description: successful
+          content: {}
+  "/api/v1/locations/{id}/deaths":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: Get all deaths for a location
+      tags:
+      - v1
+      responses:
+        '200':
+          description: successful
+          content: {}
+  "/api/v1/locations/{id}/latest":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: Get latest cases for a location
+      tags:
+      - v1
+      responses:
+        '200':
+          description: successful
+          content: {}
+  "/api/v1/locations/{id}/recovered":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: Get all recovered cases for a location
+      tags:
+      - v1
+      responses:
+        '200':
+          description: successful
+          content: {}
+  "/api/v1/locations":
+    get:
+      summary: Get all locations
+      tags:
+      - v1
+      responses:
+        '200':
+          description: successful
+          content: {}
+  "/api/v1/locations/{id}":
+    get:
+      summary: Get location by id
+      tags:
+      - v1
+      parameters:
+      - name: id
+        in: path
+        description: id
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: successful
+          content: {}
+servers:
+- url: http://{defaultHost}
+  variables:
+    defaultHost:
+      default: localhost:3000

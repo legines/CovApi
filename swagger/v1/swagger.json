@@ -1,0 +1,152 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "API V1",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/v1/locations/{id}/confirmed": {
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "description": "id",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "confirmed location",
+        "responses": {
+          "200": {
+            "description": "successful",
+            "content": {
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/locations/{id}/deaths": {
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "description": "id",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "deaths location",
+        "responses": {
+          "200": {
+            "description": "successful",
+            "content": {
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/locations/{id}/latest": {
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "description": "id",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "latest location",
+        "responses": {
+          "200": {
+            "description": "successful",
+            "content": {
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/locations/{id}/recovered": {
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "description": "id",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "recovered location",
+        "responses": {
+          "200": {
+            "description": "successful",
+            "content": {
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/locations": {
+      "get": {
+        "summary": "list locations",
+        "tags": [
+          "Locations"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful",
+            "content": {
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/locations/{id}": {
+      "get": {
+        "summary": "show location",
+        "tags": [
+          "locations"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful",
+            "content": {
+            }
+          }
+        }
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "https://{defaultHost}",
+      "variables": {
+        "defaultHost": {
+          "default": "www.example.com"
+        }
+      }
+    }
+  ]
+}
