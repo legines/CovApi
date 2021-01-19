@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "API V1",
+    "title": "Coronavirus Tracker",
     "version": "v1"
   },
   "paths": {
@@ -18,7 +18,10 @@
         }
       ],
       "get": {
-        "summary": "confirmed location",
+        "summary": "Get all confirmed cases for a location",
+        "tags": [
+          "v1"
+        ],
         "responses": {
           "200": {
             "description": "successful",
@@ -41,7 +44,10 @@
         }
       ],
       "get": {
-        "summary": "deaths location",
+        "summary": "Get all deaths for a location",
+        "tags": [
+          "v1"
+        ],
         "responses": {
           "200": {
             "description": "successful",
@@ -64,7 +70,10 @@
         }
       ],
       "get": {
-        "summary": "latest location",
+        "summary": "Get latest cases for a location",
+        "tags": [
+          "v1"
+        ],
         "responses": {
           "200": {
             "description": "successful",
@@ -87,7 +96,10 @@
         }
       ],
       "get": {
-        "summary": "recovered location",
+        "summary": "Get all recovered cases for a location",
+        "tags": [
+          "v1"
+        ],
         "responses": {
           "200": {
             "description": "successful",
@@ -99,9 +111,9 @@
     },
     "/api/v1/locations": {
       "get": {
-        "summary": "list locations",
+        "summary": "Get all locations",
         "tags": [
-          "Locations"
+          "v1"
         ],
         "responses": {
           "200": {
@@ -114,9 +126,9 @@
     },
     "/api/v1/locations/{id}": {
       "get": {
-        "summary": "show location",
+        "summary": "Get location by id",
         "tags": [
-          "locations"
+          "v1"
         ],
         "parameters": [
           {
@@ -141,10 +153,10 @@
   },
   "servers": [
     {
-      "url": "https://{defaultHost}",
+      "url": "http://{defaultHost}",
       "variables": {
         "defaultHost": {
-          "default": "www.example.com"
+          "default": "localhost:3000"
         }
       }
     }
