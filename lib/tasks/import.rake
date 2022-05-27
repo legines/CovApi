@@ -10,7 +10,7 @@ namespace :import do
     desc "Import Covid Time Series"
     task deaths: :environment do
         ALL_URLS.each do |url|
-            csv_text = open("#{BASE_URL}#{url}") 
+            csv_text = URI.parse("#{BASE_URL}#{url}").read
             csv = CSV.parse(csv_text, headers: true)
             if url == 'time_series_covid19_deaths_global.csv'
                 dates = csv.headers.reject { |header| ["Province/State", "Country/Region", "Lat", "Long"].include?(header) }
